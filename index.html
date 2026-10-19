@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kajal Kumari Singh</title>
+  <meta name="description" content="Portfolio of Kajal Kumari Singh, a full-stack and GenAI developer studying Electronics and Communication Engineering at NIT Patna.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS (Play CDN) + its theme config -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="js/tailwind-config.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Primary">
+  <div class="gutter nav-inner">
+    <a href="#top" class="brand">Kajal<span>.</span>Singh</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div class="progress" id="progress"></div>
+</nav>
+
+<canvas id="scene" aria-hidden="true"></canvas>
+
+<main>
+  <!-- HERO -->
+  <header id="top" class="gutter" style="padding-top:128px;padding-bottom:72px;">
+    <p class="eyebrow">B.Tech ECE · NIT Patna · Batch of 2027</p>
+    <h1 id="name" class="name" aria-label="Kajal Kumari Singh">
+      <span class="line">Kajal</span>
+      <span class="line outline">Kumari</span>
+      <span class="line amber">Singh</span>
+    </h1>
+    <p class="roleline"><span style="color:var(--amber)">/</span><span class="role-wrap"><span id="role" class="role">Full Stack Developer</span></span></p>
+    <p class="lead mt-6" style="font-size:1.1rem;">I engineer full-stack web applications and LLM-powered systems using modern technologies, combining robust backend development, intuitive interfaces, and AI-driven workflows.</p>
+    <div class="flex flex-wrap gap-3 mt-8">
+      <a href="#projects" class="btn btn-primary">See my work</a>
+      <a href="#contact" class="btn">Get in touch</a>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-14 max-w-3xl">
+      <div class="panel p-4"><div class="big-num" style="font-size:2rem">8.03</div><div class="kv" style="color:var(--muted)">CGPA, NIT Patna</div></div>
+      <div class="panel p-4"><div class="big-num" style="font-size:2rem">1638</div><div class="kv" style="color:var(--muted)">LeetCode rating</div></div>
+      <div class="panel p-4"><div class="big-num" style="font-size:2rem">1613</div><div class="kv" style="color:var(--muted)">CodeChef · 3 star</div></div>
+      
+    </div>
+  </header>
+
+  <div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="gutter grid lg:grid-cols-5 gap-10 items-start">
+      <div class="lg:col-span-3" data-reveal>
+        <p class="eyebrow">About</p>
+        <h2 class="h2">Engineering student, software at heart.</h2>
+        <p class="lead mt-6">I'm a final-year Electronics and Communication Engineering student at NIT Patna who spends most of my time on the software side. I build full-stack apps with the MERN stack and add generative AI where it solves a real problem, like turning a recorded meeting into summaries, decisions and tasks.</p>
+        <p class="lead mt-4">I practice data structures and algorithms on LeetCode, CodeChef and HackerRank, contribute to open source through GirlScript Summer of Code, and help run internships as a coordinator in NIT Patna's Training and Placement Cell.</p>
+      </div>
+      <aside class="lg:col-span-2" data-reveal style="perspective:1000px;">
+        <div class="panel tilt p-6">
+          <dl class="kv pop">
+            <dt>Based in</dt><dd>Patna, Bihar, India</dd>
+            <dt>Degree</dt><dd>B.Tech, Electronics and Communication · 2023 to 2027</dd>
+            <dt>Focus</dt><dd>Full stack, generative AI, system design</dd>
+            <dt>Currently</dt><dd>Internship Coordinator: Training and Placement Cell 
+              <br>
+              Mentee: Codess.Cafe</dd>
+            <dt>Open source</dt><dd style="margin:0">GirlScript Summer of Code contributor</dd>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="gutter">
+      <div data-reveal>
+        <p class="eyebrow">Skills · 7 areas</p>
+        <h2 class="h2">The stack I work in.</h2>
+      </div>
+      <div class="ring-scene mt-6" id="ringScene" aria-label="Rotating list of core technologies"><div class="ring" id="ring"></div></div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+        <div class="panel p-5" data-reveal><h3 class="eyebrow mb-4">Languages</h3><div class="flex flex-wrap gap-2"><span class="chip hot">C++</span><span class="chip hot">Python</span><span class="chip hot">JavaScript</span></div></div>
+        <div class="panel p-5" data-reveal><h3 class="eyebrow mb-4">Web and backend</h3><div class="flex flex-wrap gap-2"><span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">REST APIs</span><span class="chip">Tailwind CSS</span><span class="chip">Bootstrap</span></div></div>
+        <div class="panel p-5" data-reveal><h3 class="eyebrow mb-4">Databases</h3><div class="flex flex-wrap gap-2"><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">MongoDB</span></div></div>
+        <div class="panel p-5" data-reveal><h3 class="eyebrow mb-4">System design</h3><div class="flex flex-wrap gap-2"><span class="chip">LLD</span><span class="chip">HLD</span></div></div>
+        <div class="panel p-5" data-reveal><h3 class="eyebrow mb-4">Generative AI</h3><div class="flex flex-wrap gap-2"><span class="chip hot">RAG</span><span class="chip">Prompt engineering</span><span class="chip">Gemini API</span></div></div>
+        <div class="panel p-5" data-reveal><h3 class="eyebrow mb-4">Tools</h3><div class="flex flex-wrap gap-2"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">VS Code</span><span class="chip">Postman</span></div></div>
+        <div class="panel p-5 sm:col-span-2 lg:col-span-2" data-reveal><h3 class="eyebrow mb-4">CS fundamentals</h3><div class="flex flex-wrap gap-2"><span class="chip">Data structures and algorithms</span><span class="chip">Object-oriented programming</span><span class="chip">DBMS</span><span class="chip">Operating systems</span><span class="chip">Computer networks</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="gutter">
+      <div data-reveal>
+        <p class="eyebrow">Projects · 2</p>
+        <h2 class="h2">Things I've built.</h2>
+      </div>
+
+      <div class="mt-10" style="perspective:1200px;" data-reveal>
+        <article class="panel tilt p-6 md:p-8 grid lg:grid-cols-5 gap-8">
+          <div class="lg:col-span-3 min-w-0">
+            <div class="flex flex-wrap items-center gap-3 kv" style="color:var(--muted)"><span>Apr 2026 to Jul 2026</span><span>·</span><span>Full stack · GenAI</span></div>
+            <h3 class="pop mt-3" style="font:800 clamp(1.6rem,3.5vw,2.4rem)/1.05 var(--font-display);letter-spacing:-.02em;">AI-Powered Meeting Intelligence Platform</h3>
+            <ul class="mt-5 grid gap-3" style="color:var(--muted)">
+              <li>Transcribes meeting audio with Whisper, then uses the Gemini API to write structured summaries, pull out key decisions and list action items.</li>
+              <li>A retrieval-augmented generation pipeline on PostgreSQL with pgvector lets you search semantically and ask questions in plain language across every transcript.</li>
+              <li>Adds sentiment analysis, automated task assignment, deadline prediction, email notifications and interactive analytics dashboards.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-6"><span class="chip hot">Whisper</span><span class="chip hot">Gemini API</span><span class="chip hot">RAG</span><span class="chip">PostgreSQL</span><span class="chip">pgvector</span><span class="chip">Full stack</span></div>
+            <div class="flex flex-wrap gap-3 mt-7">
+              <a data-link="liveDemo" hidden target="_blank" rel="noopener" class="btn btn-primary">Live demo ↗</a>
+              <a data-link="meetingRepo" hidden target="_blank" rel="noopener" class="btn">Source code ↗</a>
+            </div>
+          </div>
+          <div class="lg:col-span-2 min-w-0 grid gap-6 content-center">
+            <div class="wave" id="wave" aria-hidden="true"></div>
+            <div class="pipe kv">
+              <div class="pipe-step"><strong style="color:var(--amber)">Audio in</strong><br><span style="color:var(--muted)">Upload a recorded meeting</span></div>
+              <div class="pipe-step"><strong style="color:var(--amber)">Whisper</strong><br><span style="color:var(--muted)">Speech to transcript</span></div>
+              <div class="pipe-step"><strong style="color:var(--amber)">Gemini</strong><br><span style="color:var(--muted)">Summary, decisions, tasks</span></div>
+              <div class="pipe-step"><strong style="color:var(--amber)">pgvector</strong><br><span style="color:var(--muted)">Ask questions across meetings</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="mt-6" style="perspective:1200px;" data-reveal>
+        <article class="panel tilt p-6 md:p-8 grid lg:grid-cols-5 gap-8">
+          <div class="lg:col-span-3 min-w-0">
+            <div class="flex flex-wrap items-center gap-3 kv" style="color:var(--muted)"><span>Apr 2025</span><span>·</span><span>MERN stack</span></div>
+            <h3 class="pop mt-3" style="font:800 clamp(1.6rem,3.5vw,2.4rem)/1.05 var(--font-display);letter-spacing:-.02em;">Margadarshan Hub</h3>
+            <p class="mt-5" style="color:var(--muted)">A full-stack platform for placement guidance and a campus coding community, built with MongoDB, Express.js, React.js, Node.js and Tailwind CSS. It gives students one place to prepare for placements and practice coding together.</p>
+            <div class="flex flex-wrap gap-2 mt-6"><span class="chip">MongoDB</span><span class="chip">Express.js</span><span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">Tailwind CSS</span></div>
+            <div class="flex flex-wrap gap-3 mt-7">
+              <a data-link="hubDemo" hidden target="_blank" rel="noopener" class="btn btn-primary">Live site ↗</a>
+              <a data-link="hubRepo" hidden target="_blank" rel="noopener" class="btn">Source code ↗</a>
+            </div>
+          </div>
+          <div class="lg:col-span-2 min-w-0 grid grid-cols-3 gap-3 content-center text-center">
+            <div><div class="big-num" data-count="500" data-suffix="+">500+</div><div class="kv" style="color:var(--muted)">students</div></div>
+            <div><div class="big-num" data-count="95" data-suffix="%">95%</div><div class="kv" style="color:var(--muted)">adoption</div></div>
+            <div><div class="big-num" data-count="80" data-suffix="%">80%</div><div class="kv" style="color:var(--muted)">more engagement</div></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="gutter grid lg:grid-cols-5 gap-10">
+      <div class="lg:col-span-2" data-reveal>
+        <p class="eyebrow">Experience and leadership</p>
+        <h2 class="h2">Where I've put the skills to work.</h2>
+      </div>
+      <div class="lg:col-span-3 min-w-0">
+        <div class="tl" id="timeline">
+          <div class="tl-base"></div><div class="tl-fill" id="tlFill"></div>
+
+          <div class="tl-item" data-reveal>
+            <div class="kv" style="color:var(--teal)">Jun 2026 · Virtual experience, Forage</div>
+            <h3 class="mt-1" style="font:700 1.35rem/1.2 var(--font-display)">Advanced Software Engineering Job Simulation, Walmart USA</h3>
+            <ul class="mt-3 grid gap-2" style="color:var(--muted)">
+              <li>Implemented a Power of Two Max Heap in Java with configurable branching factors, supporting efficient insert and popMax operations.</li>
+              <li>Designed a UML class diagram for a data-processing pipeline that uses abstraction to support multiple processing modes and database implementations, including PostgreSQL, Redis and Elasticsearch.</li>
+              <li>Designed a normalized ERD for a pet-products database covering products, manufacturers, animals, customers, transactions, locations and shipments with primary and foreign keys.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-4"><span class="chip">Java</span><span class="chip">UML</span><span class="chip">ERD</span><span class="chip">Data structures</span><span class="chip">OOP design</span></div>
+          </div>
+
+          <div class="tl-item" data-reveal>
+            <div class="kv" style="color:var(--teal)">Aug 2025 to present · Patna, Bihar</div>
+            <h3 class="mt-1" style="font:700 1.35rem/1.2 var(--font-display)">Internship Coordinator, Training and Placement Cell, NIT Patna</h3>
+          </div>
+
+          <div class="tl-item" data-reveal>
+            <div class="kv" style="color:var(--teal)">Jan 2026 to present</div>
+            <h3 class="mt-1" style="font:700 1.35rem/1.2 var(--font-display)">Mentee, Codess.Cafe</h3>
+          </div>
+        </div>
+
+        <h3 class="eyebrow mt-14 mb-5" data-reveal>Education</h3>
+        <div class="grid gap-3">
+          <div class="panel p-5 flex flex-wrap justify-between gap-x-6 gap-y-1" data-reveal>
+            <div class="min-w-0"><div style="font:700 1.05rem/1.3 var(--font-display)">National Institute of Technology, Patna</div><div class="kv" style="color:var(--muted)">B.Tech, Electronics and Communication Engineering</div></div>
+            <div class="kv text-right"><div style="color:var(--amber)">CGPA 8.03</div><div style="color:var(--muted)">2023 to 2027</div></div>
+          </div>
+          <div class="panel p-5 flex flex-wrap justify-between gap-x-6 gap-y-1" data-reveal>
+            <div class="min-w-0"><div style="font:700 1.05rem/1.3 var(--font-display)">R.M.W College, Nawada</div><div class="kv" style="color:var(--muted)">Senior Secondary Education</div></div>
+            <div class="kv text-right"><div style="color:var(--amber)">77.5%</div><div style="color:var(--muted)">2019 to 2021</div></div>
+          </div>
+          <div class="panel p-5 flex flex-wrap justify-between gap-x-6 gap-y-1" data-reveal>
+            <div class="min-w-0"><div style="font:700 1.05rem/1.3 var(--font-display)">S.S.H.B.V School, Howrah</div><div class="kv" style="color:var(--muted)">Secondary Education</div></div>
+            <div class="kv text-right"><div style="color:var(--amber)">70%</div><div style="color:var(--muted)">2018 to 2019</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="section">
+    <div class="gutter">
+      <div data-reveal>
+        <p class="eyebrow">Achievements and certifications</p>
+        <h2 class="h2">Proof of practice.</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10" style="perspective:1200px;">
+        <div class="panel tilt p-6" data-reveal><div class="big-num pop" data-count="1638">1638</div><h3 class="mt-3" style="font:700 1.1rem/1.2 var(--font-display)">LeetCode</h3><p class="kv mt-1" style="color:var(--muted)">Contest rating that reflects steady problem-solving and algorithm practice.</p></div>
+        <div class="panel tilt p-6" data-reveal><div class="big-num pop" data-count="1613">1613</div><h3 class="mt-3" style="font:700 1.1rem/1.2 var(--font-display)">CodeChef</h3><p class="kv mt-1" style="color:var(--muted)">3 star coder.</p></div>
+        <div class="panel tilt p-6" data-reveal><div class="big-num pop">4★ · 3★</div><h3 class="mt-3" style="font:700 1.1rem/1.2 var(--font-display)">HackerRank</h3><p class="kv mt-1" style="color:var(--muted)">4 star in Problem Solving, 3 star in SQL.</p></div>
+        <div class="panel tilt p-6" data-reveal><div class="big-num pop" style="font-size:clamp(1.9rem,4vw,2.6rem)">Top 5,000</div><h3 class="mt-3" style="font:700 1.1rem/1.2 var(--font-display)">Build With India</h3><p class="kv mt-1" style="color:var(--muted)">Team ranked in the top 5,000 of 25,000 participants.</p>
+          <a data-link="certBuildWithIndia" hidden target="_blank" rel="noopener" class="btn mt-4" style="padding:8px 14px;font-size:.8rem">Certificate ↗</a></div>
+      </div>
+      <div class="panel p-6 mt-4 flex flex-wrap items-center justify-between gap-4" data-reveal>
+        <div class="min-w-0"><h3 style="font:700 1.1rem/1.2 var(--font-display)">Open source contribution, GirlScript Summer of Code</h3><p class="kv mt-1" style="color:var(--muted)">Contributed to open-source projects through GSSoC.</p></div>
+        <a data-link="certGssoc" hidden target="_blank" rel="noopener" class="btn" style="padding:8px 14px;font-size:.8rem">Certificate ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section" style="padding-bottom:56px;">
+    <div class="gutter">
+      <div data-reveal>
+        <p class="eyebrow">Contact</p>
+        <h2 class="h2" style="font-size:clamp(2.4rem,8vw,6rem);">Let's build<br>something.</h2>
+        <p class="lead mt-6">Open to internships and project collaborations. The fastest way to reach me is email.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 mt-10 max-w-3xl" data-reveal>
+        <div class="panel p-5">
+          <div class="eyebrow mb-2">Email</div>
+          <div id="emailText" class="break-all" style="font:500 1rem/1.4 var(--font-mono)">kajal914256@gmail.com</div>
+          <div class="flex flex-wrap gap-2 mt-4"><button class="copy-btn" type="button" data-copy="kajal914256@gmail.com" data-target="emailText">Copy</button><a class="copy-btn" href="mailto:kajal914256@gmail.com">Open mail app</a></div>
+        </div>
+        <div class="panel p-5">
+          <div class="eyebrow mb-2">Phone</div>
+          <div id="phoneText" style="font:500 1rem/1.4 var(--font-mono)">+91 9142562800</div>
+          <div class="flex flex-wrap gap-2 mt-4"><button class="copy-btn" type="button" data-copy="+91 9142562800" data-target="phoneText">Copy</button></div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-3 mt-6" data-reveal>
+        <a data-link="linkedin" hidden target="_blank" rel="noopener" class="btn">LinkedIn ↗</a>
+        <a data-link="github" hidden target="_blank" rel="noopener" class="btn">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="gutter kv" style="color:var(--muted);padding-block:28px;border-top:1px solid var(--line);margin-top:24px;">
+  <div class="flex flex-wrap justify-between gap-2"><span>© 2026 Kajal Kumari Singh</span><span>Built with Three.js, GSAP and Tailwind CSS</span></div>
+</footer>
+
+<div id="toast" class="toast" hidden role="status"></div>
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Your code -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
